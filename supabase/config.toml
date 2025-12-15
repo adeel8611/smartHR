@@ -1,0 +1,10 @@
+project_id = "txcwplnfuillccxhmqsv"
+
+[functions.notify-admin-new-user]
+verify_jwt = false
+
+[functions.send-bulk-email]
+verify_jwt = true
+
+[functions.analyze-resume]
+verify_jwt = true
