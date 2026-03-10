@@ -1,12 +1,12 @@
 import { UserRole } from "@/types/user";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { 
-  Users, 
-  Calendar, 
-  Clock, 
-  Video, 
-  MessageSquare, 
+import {
+  Users,
+  Calendar,
+  Clock,
+  Video,
+  MessageSquare,
   BarChart3,
   MapPin,
   FileText,
@@ -35,7 +35,6 @@ const Navigation = ({ userRole, currentPage, onPageChange, onLogout }: Navigatio
           { id: 'meetings', label: 'Meetings', icon: Calendar },
           { id: 'interviews', label: 'Interviews', icon: Video },
           { id: 'employees', label: 'Employees', icon: Users },
-          { id: 'messages', label: 'Messages', icon: MessageSquare },
         ];
       case 'staff':
         return [
@@ -62,7 +61,7 @@ const Navigation = ({ userRole, currentPage, onPageChange, onLogout }: Navigatio
         <h1 className="text-xl font-bold text-foreground">Smart HR</h1>
         <p className="text-sm text-muted-foreground mt-1 capitalize">{userRole} Portal</p>
       </div>
-      
+
       <div className="flex-1 p-4 space-y-2">
         {navigationItems.map((item) => {
           const Icon = item.icon;

@@ -15,7 +15,7 @@ const Auth = () => {
   const [searchParams] = useSearchParams();
   const { signIn, signUp, resetPassword } = useAuth();
   const { toast } = useToast();
-  
+
   const [loading, setLoading] = useState(false);
   const [activeTab, setActiveTab] = useState('signin');
   const [signInData, setSignInData] = useState({
@@ -115,7 +115,17 @@ const Auth = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background/95 to-primary/10 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-background via-background/95 to-primary/10 flex flex-col items-center justify-center p-4 relative">
+      <div className="absolute top-8 right-8">
+        <Button
+          variant="ghost"
+          onClick={() => navigate('/intro')}
+          className="gap-2 hover:bg-primary/10"
+        >
+          <Building2 className="h-4 w-4" />
+          Home
+        </Button>
+      </div>
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <div className="flex items-center justify-center mb-4">
