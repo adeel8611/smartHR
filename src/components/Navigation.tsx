@@ -12,7 +12,11 @@ import {
   FileText,
   LogOut,
   CalendarDays,
-  UserPlus
+  UserPlus,
+  Flame,
+  Brain,
+  Sparkles,
+  Scale
 } from "lucide-react";
 
 interface NavigationProps {
@@ -35,6 +39,9 @@ const Navigation = ({ userRole, currentPage, onPageChange, onLogout }: Navigatio
           { id: 'meetings', label: 'Meetings', icon: Calendar },
           { id: 'interviews', label: 'Interviews', icon: Video },
           { id: 'employees', label: 'Employees', icon: Users },
+          { id: 'skill-gap', label: 'Skill Gap Analysis', icon: Brain },
+          { id: 'burnout-predictor', label: 'Burnout Predictor', icon: Flame },
+          { id: 'truth-portal', label: 'Truth Portal', icon: Scale },
         ];
       case 'staff':
         return [
@@ -42,6 +49,7 @@ const Navigation = ({ userRole, currentPage, onPageChange, onLogout }: Navigatio
           { id: 'attendance', label: 'My Attendance', icon: Clock },
           { id: 'leave', label: 'My Leave', icon: CalendarDays },
           { id: 'meetings', label: 'My Meetings', icon: Calendar },
+          { id: 'truth-portal', label: 'Truth Portal', icon: Scale },
         ];
       case 'candidate':
         return [

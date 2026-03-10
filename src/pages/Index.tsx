@@ -16,6 +16,9 @@ import OnboardingManagement from "./OnboardingManagement";
 import ReportsAnalytics from "./ReportsAnalytics";
 import Settings from "./Settings";
 import NotificationBell from "@/components/NotificationBell";
+import SkillGapHeatmap from "@/components/SkillGapHeatmap";
+import BurnoutPredictor from "@/components/BurnoutPredictor";
+import TruthPortal from "@/components/TruthPortal";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -70,6 +73,12 @@ const Index = () => {
         return <HoursBasedAnalytics />;
       case 'settings':
         return <Settings />;
+      case 'skill-gap':
+        return <SkillGapHeatmap />;
+      case 'burnout-predictor':
+        return <BurnoutPredictor />;
+      case 'truth-portal':
+        return <TruthPortal />;
       default:
         return renderDashboard();
     }
